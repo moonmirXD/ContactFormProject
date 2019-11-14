@@ -1,0 +1,40 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let form of forms">
+        <th scope="row">{{ form._id }}</th>
+        <td>{{ form.fullName }}</td>
+        <td>{{ form.emailAddress }}</td>
+
+        <td>
+          <mat-button-toggle [routerLink]="['/form-view', form._id]">
+            <i class="fa fa-eye fa-2x"></i>
+
+            <!-- <mat-icon>pageview</mat-icon> -->
+          </mat-button-toggle>
+
+          <!-- <mat-button-toggle-group #group="matButtonToggleGroup">
+            <mat-button-toggle value="left" aria-label="Text align left">
+              <mat-icon>pageview</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value="center" aria-label="Text align center">
+              <mat-icon>edit</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value="right" aria-label="Text align right">
+              <mat-icon>restore_from_trash</mat-icon>
+            </mat-button-toggle>
+          </mat-button-toggle-group> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <div class="example-selected-value">Selected value: {{ group?.value }}</div> -->
+</div>

@@ -1,0 +1,145 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Anton|Indie+Flower|Mansalva|Paytone+One|Press+Start+2P&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<body>
+  <div class="container" style="height: 500px;">
+    <div class="jumbotron" style="height: 450px;">
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="../../assets/images/web-development-png-download-the-datasheet-557.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="col-6">
+          <h2
+            style="font-family: 'Press Start 2P', cursive;text-align: center; color:#cfcf49"
+          >
+            Having a Website is not enough.
+          </h2>
+          <p
+            class="lead"
+            style="font-family: 'Mansalva', cursive;color: aliceblue;font-size: x-large;"
+          >
+            It's our desire to understand your business and needs so that we can
+            be more effective in providing you with the right Web-based business
+            solutions and high impact digital presence. We align with your
+            business strategies. We develop the right Web Application for you.
+            We enable your business success.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card border-info mb-3">
+      <div class="card-body">
+        <form #techForm="ngForm" [formGroup]="regForm">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Full Name</label>
+              <input
+                formControlName="fullName"
+                type="email"
+                class="form-control"
+                placeholder="Full Name"
+                name="fullName"
+              />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                name="emailAddress"
+                formControlName="emailAddress"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Company</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Company"
+              name="company"
+              formControlName="company"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">Telephone No.</label>
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="Telephone No."
+              name="contactNo"
+              formControlName="contactNo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Subject</label>
+            <select
+              class="form-control"
+              id="exampleFormControlSelect1"
+              name="subject"
+              formControlName="subject"
+            >
+              <option>To inquire</option>
+              <option>Job search</option>
+              <option>About websites</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="ohnohoney" for="email"></label>
+            <input
+              type="text"
+              class="ohnohoney"
+              placeholder=""
+              name="promoCode"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="ohnohoney" for="birthday"></label>
+            <input
+              type="date"
+              class="ohnohoney"
+              placeholder=""
+              name="birthday"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="validationTextarea">Message</label>
+            <textarea
+              class="form-control"
+              placeholder="Message us."
+              required
+              name="message"
+              formControlName="message"
+            ></textarea>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary btn-block btn-lg"
+            (click)="formCreate(techForm.value)"
+          >
+            <i class="fa fa-save"></i>
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
