@@ -5,7 +5,6 @@
     "start": "node server.js",
     "postinstall": "ng build --output-path angularapp  --aot --prod",
     "ng": "ng",
-    // "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
