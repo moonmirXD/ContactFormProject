@@ -2,13 +2,14 @@
   "name": "contactform",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js",
     "postinstall": "ng build --output-path angularapp  --aot --prod",
     "ng": "ng",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
