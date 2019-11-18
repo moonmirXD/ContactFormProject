@@ -1,24 +1,22 @@
-/* * {
-  margin: 0;
-  padding: 0;
-} */
 body {
-  padding-top: 80px;
-  /* background-image: url("../../assets/images/undraw_code_review_l1q9.png"); */
-
-  /* Full height */
-  height: 150%;
-
-  /* Center and scale the image nicely */
-  background-size: cover;
-  /* <------ */
-  background-repeat: no-repeat;
-  background-position: center center;
+  padding: 5px;
+  margin: auto;
+}
+.container {
+  padding: 5px;
 }
 .jumbotron {
-  background: url("../../assets/images/markus-spiske-xekxE_VR0Ec-unsplash.jpg");
-  background-size: cover;
+  color: black;
+  width: 80%;
+  margin: auto;
+  border-radius: 50px 200px 50px;
+  /* border: 3px solid #bada55; */
+  border: 3px solid#89abc4;
+
+  padding: 50px;
+  word-break: break-all; /* optional */
 }
+
 .card {
   width: 70%;
   margin-left: auto;
@@ -26,8 +24,13 @@ body {
   max-width: 100%;
   zoom: 1;
   opacity: 1;
-  background-color: rgb(129, 248, 168);
-  /* background-color: transparent; */
+}
+
+#privateact {
+  margin-top: 50px;
+  padding-top: 50px;
+  text-align: center;
+  font-style: italic;
 }
 
 button {
@@ -35,10 +38,6 @@ button {
 }
 
 .card-header {
-  /* background-image: url("../../assets/images/undraw_solution_mindset_34bi.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; */
   background-color: white;
   opacity: 0.9;
 }
@@ -53,9 +52,64 @@ button {
   z-index: -1;
 }
 
-.font-italic {
-  width: 100%;
-  left: 0px;
-  right: 0px;
-  padding: 0;
+.icons {
+  text-align: center;
+}
+
+.cardh {
+  text-align: center;
+}
+
+.cardh2 {
+  line-height: 120%;
+}
+
+.sendUs {
+  font-family: "Calistoga", cursive;
+  text-align: center;
+  color: #255b89;
+}
+.card,
+.card-header,
+.card-body,
+.card-footer {
+  border-radius: 30px !important;
+}
+
+.btn {
+  border-radius: 20px;
+}
+
+h3 {
+  font-family: "Calistoga", cursive;
+}
+
+p {
+  font-family: "Calistoga", cursive;
+  font-size: 16px;
+}
+.icon {
+  text-align: center;
+}
+.wrapper {
+  display: inline-flex;
+  justify-content: center;
+}
+.wrapper i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+.wrapper a:nth-child(1) {
+  color: #dd4b39;
+}
+.wrapper a:nth-child(2) {
+  color: #4867aa;
+}
+.wrapper a:nth-child(3) {
+  color: #1da1f2;
+}
+.wrapper i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
 }

@@ -1,7 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { CommonService } from "../services/common.service";
-import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
+import {
+  FormBuilder,
+  FormGroup,
+  FormControl,
+  Validators
+} from "@angular/forms";
+import { HttpErrorResponse } from "@angular/common/http";
+import { ContactForm } from "../contact-form";
 
 @Component({
   selector: "app-form",
@@ -9,40 +16,29 @@ import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
   styleUrls: ["./form.component.css"]
 })
 export class FormComponent implements OnInit {
-  // formData = {
-  //   clientId: this.router.url,
-  //   fullName: "",
-  //   emailAddress: "",
-  //   company: "",
-  //   contactNo: "",
-  //   subject: "",
-  //   promoCode: undefined,
-  //   message: ""
-  // };
-  regForm = this.fb.group({
-    clientId: ["asd"],
-    fullName: [""],
-    emailAddress: [""],
-    company: [""],
-    contactNo: [""],
+  regForm: ContactForm = this.fb.group({
+    clientId: ["kamana"],
+    fullName: ["asdaszxc"],
+    emailAddress: ["asdasdk2l@yahoo.com"],
+    company: ["Techcellar"],
+    contactNo: ["asdasd"],
     subject: [""],
     promoCode: [""],
-    message: [""]
+    message: ["asdassads"]
   });
   constructor(
     private commonService: CommonService,
     private router: Router,
     private fb: FormBuilder
   ) {}
-
+  data: any;
   ngOnInit() {}
   formCreate(formData) {
-    this.commonService
-      .createForm(this.regForm.getRawValue())
-      .subscribe(data => {
-        console.log("Success");
-        console.log(data);
-        alert("created");
-      });
+    this.commonService.createForm(this.regForm.value).subscribe((res: any) => {
+      console.log("hehe:" + JSON.stringify(res));
+      alert(JSON.stringify(res.message));
+      // this.router.navigate(["page-ender"]);
+      console.log(res);
+    });
   }
 }
