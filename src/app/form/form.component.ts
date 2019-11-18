@@ -17,14 +17,14 @@ import { ContactForm } from "../contact-form";
 })
 export class FormComponent implements OnInit {
   regForm: ContactForm = this.fb.group({
-    clientId: ["kamana"],
-    fullName: ["asdaszxc"],
-    emailAddress: ["asdasdk2l@yahoo.com"],
-    company: ["Techcellar"],
-    contactNo: ["asdasd"],
+    clientId: [""],
+    fullName: [""],
+    emailAddress: [""],
+    company: [""],
+    contactNo: [""],
     subject: [""],
     promoCode: [""],
-    message: ["asdassads"]
+    message: [""]
   });
   constructor(
     private commonService: CommonService,
@@ -37,7 +37,6 @@ export class FormComponent implements OnInit {
     this.commonService.createForm(this.regForm.value).subscribe((res: any) => {
       console.log("hehe:" + JSON.stringify(res));
       alert(JSON.stringify(res.message));
-      // this.router.navigate(["page-ender"]);
       console.log(res);
     });
   }

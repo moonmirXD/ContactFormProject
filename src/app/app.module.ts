@@ -15,9 +15,8 @@ import { FormViewComponent } from "./form-view/form-view.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./guard/auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
-import { HomeComponent } from './home/home.component';
-import { PageEnderComponent } from './page-ender/page-ender.component';
-import { FormV2Component } from './form-v2/form-v2.component';
+import { HomeComponent } from "./home/home.component";
+import { PageEnderComponent } from "./page-ender/page-ender.component";
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { FormV2Component } from './form-v2/form-v2.component';
     FormViewComponent,
     LoginComponent,
     HomeComponent,
-    PageEnderComponent,
-    FormV2Component
+    PageEnderComponent
   ],
   imports: [
     BrowserModule,
