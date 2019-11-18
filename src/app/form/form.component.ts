@@ -17,7 +17,7 @@ import { ContactForm } from "../contact-form";
 })
 export class FormComponent implements OnInit {
   regForm: ContactForm = this.fb.group({
-    clientId: [""],
+    clientId: ["sample"],
     fullName: [""],
     emailAddress: [""],
     company: [""],
