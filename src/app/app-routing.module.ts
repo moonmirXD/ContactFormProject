@@ -12,7 +12,7 @@ import { ContactformComponent } from "./views/contactform/contactform.component"
 const routes: Routes = [
   {
     path: "contactform",
-    component: FormComponent
+    component: ContactformComponent
     // canActivate: [AuthGuard]
   },
   {
