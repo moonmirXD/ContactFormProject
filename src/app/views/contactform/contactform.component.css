@@ -52,6 +52,7 @@ h4 {
 .footer {
   padding-bottom: 3px;
   padding-top: 5px;
+  margin: auto;
   text-align: center;
   font-style: italic;
 }

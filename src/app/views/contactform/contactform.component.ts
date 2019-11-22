@@ -2,11 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
 import { ContactForm } from "src/app/contact-form";
 import { CommonService } from "src/app/services/common.service";
-import {
-  MatDialogModule,
-  MatDialog,
-  MatDialogConfig
-} from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { DialogComponent } from "../dialog/dialog.component";
 
 @Component({
@@ -15,7 +11,6 @@ import { DialogComponent } from "../dialog/dialog.component";
   styleUrls: ["./contactform.component.css"]
 })
 export class ContactformComponent implements OnInit {
-  ContactForm: ContactForm;
   setStep(index: number) {
     this.step = index;
   }
@@ -33,7 +28,7 @@ export class ContactformComponent implements OnInit {
     private commonService: CommonService,
     private dialog: MatDialog
   ) {}
-
+  public ContactForm: ContactForm;
   ngOnInit() {
     this.ContactForm = this.formBuilder.group({
       clientId: ["asd"],
@@ -55,7 +50,7 @@ export class ContactformComponent implements OnInit {
       .subscribe((res: any) => {
         console.log(res);
         if (res.status === 404) {
-          alert("Error!");
+          alert(res.message);
         } else {
           const dialogConfig = new MatDialogConfig();
           dialogConfig.disableClose = true;
@@ -69,7 +64,5 @@ export class ContactformComponent implements OnInit {
       });
     // this.ContactForm.reset();
   }
-  onReset() {
-    this.ContactForm.reset();
-  }
+  onReset() {}
 }
