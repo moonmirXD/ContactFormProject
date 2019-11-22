@@ -16,28 +16,30 @@ import { ContactForm } from "../contact-form";
   styleUrls: ["./form.component.css"]
 })
 export class FormComponent implements OnInit {
-  regForm: ContactForm = this.fb.group({
-    clientId: ["sample"],
-    fullName: [""],
-    emailAddress: [""],
-    company: [""],
-    contactNo: [""],
-    subject: [""],
-    promoCode: [""],
-    message: [""]
-  });
   constructor(
     private commonService: CommonService,
     private router: Router,
     private fb: FormBuilder
   ) {}
-  data: any;
   ngOnInit() {}
+  ContactForm = this.fb.group({
+    clientId: ["sample"],
+    fullName: ["", Validators.required],
+    emailAddress: ["", Validators.required],
+    company: ["", Validators.required],
+    contactNo: ["", Validators.required],
+    subject: ["", Validators.required],
+    promoCode: ["", Validators.required],
+    message: ["", Validators.required]
+  });
+
   formCreate(formData) {
-    this.commonService.createForm(this.regForm.value).subscribe((res: any) => {
-      console.log("hehe:" + JSON.stringify(res));
-      alert(JSON.stringify(res.message));
-      console.log(res);
-    });
+    this.commonService
+      .createForm(this.ContactForm.value)
+      .subscribe((res: any) => {
+        console.log("hehe:" + JSON.stringify(res));
+        alert(JSON.stringify(res.message));
+        console.log(res);
+      });
   }
 }

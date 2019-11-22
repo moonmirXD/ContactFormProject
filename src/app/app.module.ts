@@ -9,15 +9,17 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FormListComponent } from "./form-list/form-list.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatIconModule } from "@angular/material/icon";
-import { MatButtonToggleModule } from "@angular/material/button-toggle";
+
 import { FormViewComponent } from "./form-view/form-view.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./guard/auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
 import { HomeComponent } from "./home/home.component";
 import { PageEnderComponent } from "./page-ender/page-ender.component";
+import { ContactformComponent } from "./views/contactform/contactform.component";
 
+import { MaterialModule } from "./material/material.module";
+import { DialogComponent } from "./views/dialog/dialog.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,17 +29,18 @@ import { PageEnderComponent } from "./page-ender/page-ender.component";
     FormViewComponent,
     LoginComponent,
     HomeComponent,
-    PageEnderComponent
+    PageEnderComponent,
+    ContactformComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatButtonToggleModule
+    ReactiveFormsModule
   ],
   providers: [
     AuthGuard,
@@ -47,6 +50,7 @@ import { PageEnderComponent } from "./page-ender/page-ender.component";
       multi: true
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule {}

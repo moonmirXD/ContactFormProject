@@ -1,7 +1,3 @@
-body {
-  padding: 5px;
-  margin: auto;
-}
 .container {
   padding: 5px;
 }
@@ -42,7 +38,7 @@ button {
   opacity: 0.9;
 }
 
-.ohnohoney {
+.winnie {
   opacity: 0;
   position: absolute;
   top: 0;

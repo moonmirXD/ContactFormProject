@@ -7,6 +7,7 @@ import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./guard/auth.guard";
 import { HomeComponent } from "./home/home.component";
 import { PageEnderComponent } from "./page-ender/page-ender.component";
+import { ContactformComponent } from "./views/contactform/contactform.component";
 
 const routes: Routes = [
   {
@@ -35,6 +36,11 @@ const routes: Routes = [
   {
     path: "page-ender",
     component: PageEnderComponent
+    // canActivate: [AuthGuard]
+  },
+  {
+    path: "contactform2",
+    component: ContactformComponent
     // canActivate: [AuthGuard]
   }
 ];
