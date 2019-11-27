@@ -125,8 +125,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.controls.touched &&
-                        !ContactForm.controls.valid
+                        ContactForm.controls.fullName.touched &&
+                        !ContactForm.controls.fullName.valid
                       "
                     >
                       Full name is required.
@@ -147,8 +147,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.controls.touched &&
-                        !ContactForm.controls.valid
+                        ContactForm.controls.emailAddress.touched &&
+                        !ContactForm.controls.emailAddress.valid
                       "
                     >
                       Email is required.
@@ -172,8 +172,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.controls.touched &&
-                        !ContactForm.controls.valid
+                        ContactForm.controls.company.touched &&
+                        !ContactForm.controls.company.valid
                       "
                     >
                       Company is required.
@@ -194,8 +194,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.controls.touched &&
-                        !ContactForm.controls.valid
+                        ContactForm.controls.contactNo.touched &&
+                        !ContactForm.controls.contactNo.valid
                       "
                     >
                       Contact Number is required.
@@ -228,8 +228,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.controls.touched &&
-                        !ContactForm.controls.valid
+                        ContactForm.controls.subject.touched &&
+                        !ContactForm.controls.subject.valid
                       "
                     >
                       Subject is required.
@@ -254,8 +254,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.controls.touched &&
-                        !ContactForm.controls.valid
+                        ContactForm.controls.message.touched &&
+                        !ContactForm.controls.message.valid
                       "
                     >
                       Message is required.
