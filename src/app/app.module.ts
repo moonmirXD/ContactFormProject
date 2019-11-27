@@ -3,7 +3,6 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { FormComponent } from "./form/form.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { FormListComponent } from "./form-list/form-list.component";
@@ -20,13 +19,11 @@ import { ContactformComponent } from "./views/contactform/contactform.component"
 
 import { MaterialModule } from "./material/material.module";
 import { DialogComponent } from "./views/dialog/dialog.component";
-import { ModalviewComponent } from './views/modalview/modalview.component';
-import { FooterComponent } from './views/footer/footer.component';
-import { ContactForm2Component } from './views/contact-form2/contact-form2.component';
+import { FooterComponent } from "./views/footer/footer.component";
+import { ContactForm2Component } from "./views/contact-form2/contact-form2.component";
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
     FormListComponent,
     NavbarComponent,
     FormViewComponent,
@@ -35,7 +32,6 @@ import { ContactForm2Component } from './views/contact-form2/contact-form2.compo
     PageEnderComponent,
     ContactformComponent,
     DialogComponent,
-    ModalviewComponent,
     FooterComponent,
     ContactForm2Component
   ],

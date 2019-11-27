@@ -31,7 +31,7 @@ export class ContactformComponent implements OnInit {
   public ContactForm: FormGroup;
   ngOnInit() {
     this.ContactForm = this.formBuilder.group({
-      // clientId: ["asdxzccxz", Validators.required],
+      // clientId: ["", Validators.required],
       fullName: ["", Validators.required],
       emailAddress: ["", Validators.required],
       company: ["", Validators.required],
@@ -41,7 +41,6 @@ export class ContactformComponent implements OnInit {
     });
   }
   onSubmit() {
-    // console.log("submitted");
     console.log("this.ContactForm.value:" + this.ContactForm.value);
     console.log("this.ContactForm:" + this.ContactForm);
 
@@ -56,10 +55,7 @@ export class ContactformComponent implements OnInit {
           dialogConfig.disableClose = true;
           dialogConfig.width = "30%";
           dialogConfig.height = "30%";
-          this.dialog.open(DialogComponent, {
-            // height: '400px',
-            // width: '600px',
-          });
+          this.dialog.open(DialogComponent, {});
         }
       });
     // this.ContactForm.reset();

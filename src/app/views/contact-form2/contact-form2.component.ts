@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
-import { ContactForm } from "src/app/contact-form";
 import { CommonService } from "src/app/services/common.service";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { DialogComponent } from "../dialog/dialog.component";
@@ -31,7 +30,7 @@ export class ContactForm2Component implements OnInit {
   public ContactForm: FormGroup;
   ngOnInit() {
     this.ContactForm = this.formBuilder.group({
-      // clientId: ["asdxzccxz", Validators.required],
+      // clientId: ["", Validators.required],
       fullName: ["", Validators.required],
       emailAddress: ["", Validators.required],
       company: ["", Validators.required],
@@ -41,7 +40,6 @@ export class ContactForm2Component implements OnInit {
     });
   }
   onSubmit() {
-    // console.log("submitted");
     console.log("this.ContactForm.value:" + this.ContactForm.value);
     console.log("this.ContactForm:" + this.ContactForm);
 
@@ -56,10 +54,7 @@ export class ContactForm2Component implements OnInit {
           dialogConfig.disableClose = true;
           dialogConfig.width = "30%";
           dialogConfig.height = "30%";
-          this.dialog.open(DialogComponent, {
-            // height: '400px',
-            // width: '600px',
-          });
+          this.dialog.open(DialogComponent, {});
         }
       });
     // this.ContactForm.reset();

@@ -1,5 +1,4 @@
 import { FormListComponent } from "./form-list/form-list.component";
-import { FormComponent } from "./form/form.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { FormViewComponent } from "./form-view/form-view.component";
@@ -29,11 +28,7 @@ const routes: Routes = [
     path: "login",
     component: LoginComponent
   },
-  {
-    path: "",
-    component: FormComponent
-    // canActivate: [AuthGuard]
-  },
+
   {
     path: "page-ender",
     component: PageEnderComponent
