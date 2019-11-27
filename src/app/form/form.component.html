@@ -60,6 +60,10 @@
             placeholder="Full Name"
             name="fullName"
             formControlName="fullName"
+            [class.is-invalid]="
+              ContactForm.get('fullName').touched &&
+              ContactForm.get('fullName').invalid
+            "
           />
         </div>
         <div class="form-group">
@@ -70,6 +74,10 @@
             placeholder="Email Address"
             name="emailAddress"
             formControlName="emailAddress"
+            [class.is-invalid]="
+              ContactForm.get('emailAddress').touched &&
+              ContactForm.get('emailAddress').invalid
+            "
           />
         </div>
         <div class="form-group">
@@ -80,6 +88,10 @@
             placeholder="Company"
             name="company"
             formControlName="company"
+            [class.is-invalid]="
+              ContactForm.get('company').touched &&
+              ContactForm.get('company').invalid
+            "
           />
         </div>
         <div class="form-group">
@@ -90,6 +102,10 @@
             placeholder="Telephone No."
             name="contactNo"
             formControlName="contactNo"
+            [class.is-invalid]="
+              ContactForm.get('contactNo').touched &&
+              ContactForm.get('contactNo').invalid
+            "
           />
         </div>
         <div class="form-group">
@@ -126,6 +142,10 @@
             required
             name="message"
             formControlName="message"
+            [class.is-invalid]="
+              ContactForm.get('message').touched &&
+              ContactForm.get('message').invalid
+            "
           ></textarea>
         </div>
         <button
