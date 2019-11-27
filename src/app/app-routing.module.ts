@@ -40,7 +40,7 @@ const routes: Routes = [
     // canActivate: [AuthGuard]
   },
   {
-    path: "contactform3",
+    path: "",
     component: ContactForm2Component
     // canActivate: [AuthGuard]
   }
