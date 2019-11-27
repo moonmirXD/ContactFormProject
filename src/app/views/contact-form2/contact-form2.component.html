@@ -1,0 +1,304 @@
+<div class="container">
+        <mat-card class="example-card">
+          <div class="mat_accordion">
+              <mat-accordion class="example-headers-align">
+                <mat-expansion-panel
+                  [expanded]="step === 0"
+                  (opened)="setStep(0)"
+                  hideToggle
+                >
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <h5>Contact Us At:</h5>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      &nbsp;<mat-icon>drafts</mat-icon>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+      
+                  <div class="text_contact">
+                    <p>+63 2 8772-8224 (Manila Office)</p>
+                    <p>+63 32 412 4266 (Cebu Office)</p>
+                    <p>info@techcellar.com</p>
+                  </div>
+      
+                  <mat-action-row>
+                    <button mat-button color="primary" (click)="nextStep()">
+                      Next
+                    </button>
+                  </mat-action-row>
+                </mat-expansion-panel>
+      
+                <mat-expansion-panel
+                  [expanded]="step === 1"
+                  (opened)="setStep(1)"
+                  hideToggle
+                >
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <h5>Find Us At:</h5>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      &nbsp;<mat-icon>house</mat-icon>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+      
+                  <div class="text_contact">
+                    <p>
+                      5/F Goodwill Building, 393 Sen. Gil Puyat Avenue Bel-air, Makati
+                      City
+                    </p>
+                    <p>Unit 217 Medalle Bldg., Osmena Blvd., Cebu City</p>
+                  </div>
+      
+                  <mat-action-row>
+                    <button mat-button color="warn" (click)="prevStep()">
+                      Previous
+                    </button>
+                    <button mat-button color="primary" (click)="nextStep()">
+                      Close
+                    </button>
+                  </mat-action-row>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          <div class="mat-header">
+            <mat-card-header>
+              <mat-card-title
+                ><h3 class="zxc">Send us your Inquiry</h3></mat-card-title
+              >
+              <mat-card-subtitle>Contact Form</mat-card-subtitle>
+            </mat-card-header>
+          </div>
+
+          <mat-card-content class="mat-content">
+            <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field appearance="outline" class="__select">
+                    <mat-label>Full Name</mat-label>
+                    <input
+                      matInput
+                      placeholder="Placeholder"
+                      name="fullName"
+                      formControlName="fullName"
+                    />
+                    <mat-icon matSuffix>assignment_ind</mat-icon>
+                    <mat-hint>Hint</mat-hint>
+                  </mat-form-field>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      ContactForm.get('fullName').touched &&
+                      !ContactForm.get('fullName').valid
+                    "
+                  >
+                    Full name is required.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field appearance="outline" class="__select">
+                    <mat-label>Email</mat-label>
+                    <input
+                      matInput
+                      placeholder="Placeholder"
+                      name="emailAddress"
+                      formControlName="emailAddress"
+                    />
+                    <mat-icon matSuffix>mail</mat-icon>
+                    <mat-hint>Hint</mat-hint>
+                  </mat-form-field>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      ContactForm.get('emailAddress').touched &&
+                      !ContactForm.get('emailAddress').valid
+                    "
+                  >
+                    Email is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field appearance="outline" class="__select">
+                    <mat-label>Company</mat-label>
+                    <input
+                      matInput
+                      placeholder="Placeholder"
+                      name="company"
+                      formControlName="company"
+                    />
+                    <mat-icon matSuffix>group</mat-icon>
+                    <mat-hint>Hint</mat-hint>
+                  </mat-form-field>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      ContactForm.get('company').touched &&
+                      !ContactForm.get('company').valid
+                    "
+                  >
+                    Company is required.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field appearance="outline" class="__select">
+                    <mat-label>Contact Number</mat-label>
+                    <input
+                      matInput
+                      placeholder="Placeholder"
+                      name="contactNo"
+                      formControlName="contactNo"
+                    />
+                    <mat-icon matSuffix>phone</mat-icon>
+                    <mat-hint>Hint</mat-hint>
+                  </mat-form-field>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      ContactForm.get('contactNo').touched &&
+                      !ContactForm.get('contactNo').valid
+                    "
+                  >
+                    Contact Number is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <mat-form-field appearance="outline" class="__select">
+                    <mat-select
+                      placeholder="Subject"
+                      name="subject"
+                      formControlName="subject"
+                    >
+                      <mat-option value="For Inquiry">For Inquiry</mat-option>
+                      <mat-option value="Job search">Job search</mat-option>
+                      <mat-option value="About Websites"
+                        >About Websites</mat-option
+                      >
+                      <mat-option value="Account Payment"
+                        >Account Payment</mat-option
+                      >
+                      <mat-option value="Development">Development</mat-option>
+                    </mat-select>
+                    <mat-hint align="end"
+                      >Here's the dropdown arrow ^</mat-hint
+                    >
+                  </mat-form-field>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      ContactForm.get('subject').touched &&
+                      !ContactForm.get('subject').valid
+                    "
+                  >
+                    Subject is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <mat-form-field
+                    class="example-full-width"
+                    appearance="outline"
+                    class="__select"
+                  >
+                    <textarea
+                      matInput
+                      placeholder="Leave a message."
+                      name="message"
+                      formControlName="message"
+                    ></textarea>
+                  </mat-form-field>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      ContactForm.get('message').touched &&
+                      !ContactForm.get('message').valid
+                    "
+                  >
+                    Message is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="buttons">
+                    <button
+                      mat-raised-button
+                      color="primary"
+                      class="btn_submit"
+                      type="button"
+                      (click)="ContactForm.reset()"
+                    >
+                      <mat-icon matSuffix>clear_all</mat-icon>Clear Form
+                    </button>
+                    <button type="submit" mat-raised-button color="primary">
+                      <mat-icon matSuffix>send</mat-icon>Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Honeypot -->
+              <div class="form-group">
+                <label class="winnie"></label>
+                <input
+                  type="text"
+                  class="winnie"
+                  placeholder=""
+                  name="promoCode"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="winnie"></label>
+                <input
+                  type="date"
+                  class="winnie"
+                  placeholder=""
+                  name="birthday"
+                />
+              </div>
+              <!-- Honeypot -->
+              <div class="row">
+                <div class="col">
+                  <mat-card-footer class="footer"
+                    >By submitting this form, I hereby give my consent to the
+                    website administrator to use and process all data received
+                    from me in accordance with the requirements of trade
+                    promotion and of Republic Act No. 10173 otherwise known as
+                    Data Privacy Act of 2012.</mat-card-footer
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="icon">
+                    <div class="wrapper">
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/company/techcellar-business-solutions"
+                        ><i
+                          class="fa fa-3x fa-linkedin-square"
+                          style="color:rgb(101, 186, 255)"
+                        ></i
+                      ></a>
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/pages/TechCellar/186610578019909?fref=ts"
+                        ><i class="fa fa-3x fa-facebook-square"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>

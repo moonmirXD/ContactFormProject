@@ -20,6 +20,9 @@ import { ContactformComponent } from "./views/contactform/contactform.component"
 
 import { MaterialModule } from "./material/material.module";
 import { DialogComponent } from "./views/dialog/dialog.component";
+import { ModalviewComponent } from './views/modalview/modalview.component';
+import { FooterComponent } from './views/footer/footer.component';
+import { ContactForm2Component } from './views/contact-form2/contact-form2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,10 @@ import { DialogComponent } from "./views/dialog/dialog.component";
     HomeComponent,
     PageEnderComponent,
     ContactformComponent,
-    DialogComponent
+    DialogComponent,
+    ModalviewComponent,
+    FooterComponent,
+    ContactForm2Component
   ],
   imports: [
     BrowserModule,

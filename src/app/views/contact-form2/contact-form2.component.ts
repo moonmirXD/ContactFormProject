@@ -6,11 +6,11 @@ import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { DialogComponent } from "../dialog/dialog.component";
 
 @Component({
-  selector: "app-contactform",
-  templateUrl: "./contactform.component.html",
-  styleUrls: ["./contactform.component.css"]
+  selector: "app-contact-form2",
+  templateUrl: "./contact-form2.component.html",
+  styleUrls: ["./contact-form2.component.css"]
 })
-export class ContactformComponent implements OnInit {
+export class ContactForm2Component implements OnInit {
   setStep(index: number) {
     this.step = index;
   }

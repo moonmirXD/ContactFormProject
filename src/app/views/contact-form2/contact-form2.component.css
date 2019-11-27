@@ -15,8 +15,8 @@ body {
   background-color: #faf8f0;
   overflow-x: hidden;
   /* background-image: url("../../../assets/images/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 .jumbotron {
   background-image: url("../../../assets/images/blake-connally-B3l0g6HLxr8-unsplash.jpg");
@@ -62,7 +62,7 @@ h4 {
   /* opacity: 0.9; */
 }
 .example-card {
-  max-width: 700 !important;
+  max-width: 800px !important;
   box-shadow: 0 0 10px #000000b3;
 }
 .btn_submit {
