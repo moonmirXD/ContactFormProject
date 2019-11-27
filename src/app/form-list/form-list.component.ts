@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { CommonService } from "../services/common.service";
-import { Router } from "@angular/router";
-import { MatTableDataSource, MatPaginator, MatDialog } from "@angular/material";
+import { MatTableDataSource, MatPaginator } from "@angular/material";
 
 @Component({
   selector: "app-form-list",
@@ -11,22 +10,16 @@ import { MatTableDataSource, MatPaginator, MatDialog } from "@angular/material";
 export class FormListComponent implements OnInit {
   forms: any;
   message: string;
-  haha: any;
-  displayedColumns: string[] = ["_id", "name", "weight", "symbol"];
+  displayedColumns: string[] = ["_id", "name", "email", "view"];
   dataSource: any;
 
-  constructor(
-    private commonService: CommonService,
-    private router: Router,
-    private dialog: MatDialog
-  ) {}
+  constructor(private commonService: CommonService) {}
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.commonService.getForm().subscribe((res: any) => {
       this.dataSource = new MatTableDataSource(res);
-      console.log("data sauce" + this.dataSource);
       this.forms = res;
       console.log(res);
       this.dataSource.paginator = this.paginator;

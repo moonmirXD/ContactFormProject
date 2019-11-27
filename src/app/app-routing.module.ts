@@ -4,7 +4,6 @@ import { Routes, RouterModule } from "@angular/router";
 import { FormViewComponent } from "./form-view/form-view.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./guard/auth.guard";
-import { HomeComponent } from "./home/home.component";
 import { PageEnderComponent } from "./page-ender/page-ender.component";
 import { ContactformComponent } from "./views/contactform/contactform.component";
 import { ContactForm2Component } from "./views/contact-form2/contact-form2.component";
@@ -32,11 +31,6 @@ const routes: Routes = [
   {
     path: "page-ender",
     component: PageEnderComponent
-    // canActivate: [AuthGuard]
-  },
-  {
-    path: "contactform2",
-    component: ContactformComponent
     // canActivate: [AuthGuard]
   },
   {

@@ -14,9 +14,6 @@ body {
   padding-top: 15px;
   background-color: #faf8f0;
   overflow-x: hidden;
-  /* background-image: url("../../../assets/images/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 .jumbotron {
   background-image: url("../../../assets/images/blake-connally-B3l0g6HLxr8-unsplash.jpg");
@@ -24,13 +21,9 @@ body {
   color: #d3dde6;
   border-radius: 20px !important;
   border: 1px solid rgb(207, 207, 44);
-  /* Image in the center of container */
   background-position: center center;
   height: auto;
-  /*  OR Image in the center top of the container */
   background-position: center top;
-
-  /*  OR Image in the center bottom of the container  */
   background-position: center bottom;
   font-family: "Fredoka One", cursive;
 }
@@ -43,7 +36,7 @@ h4 {
 .mat_accordion {
   margin: auto;
 }
-.zxc {
+.inquiryHeading {
   text-align: center !important;
 }
 
@@ -59,7 +52,6 @@ h4 {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  /* opacity: 0.9; */
 }
 .example-card {
   max-width: 700 !important;

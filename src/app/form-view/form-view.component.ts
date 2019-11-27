@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { CommonService } from "../services/common.service";
 import { ActivatedRoute } from "@angular/router";
 

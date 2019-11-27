@@ -13,7 +13,6 @@ import { FormViewComponent } from "./form-view/form-view.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./guard/auth.guard";
 import { TokenInterceptorService } from "./services/token-interceptor.service";
-import { HomeComponent } from "./home/home.component";
 import { PageEnderComponent } from "./page-ender/page-ender.component";
 import { ContactformComponent } from "./views/contactform/contactform.component";
 
@@ -28,7 +27,6 @@ import { ContactForm2Component } from "./views/contact-form2/contact-form2.compo
     NavbarComponent,
     FormViewComponent,
     LoginComponent,
-    HomeComponent,
     PageEnderComponent,
     ContactformComponent,
     DialogComponent,

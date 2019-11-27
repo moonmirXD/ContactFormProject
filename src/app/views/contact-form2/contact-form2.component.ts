@@ -10,6 +10,7 @@ import { DialogComponent } from "../dialog/dialog.component";
   styleUrls: ["./contact-form2.component.css"]
 })
 export class ContactForm2Component implements OnInit {
+  //Mat accordion
   setStep(index: number) {
     this.step = index;
   }
@@ -22,15 +23,18 @@ export class ContactForm2Component implements OnInit {
     this.step--;
   }
   step = 0;
+  //Mat accordion
+
   constructor(
     private formBuilder: FormBuilder,
     private commonService: CommonService,
     private dialog: MatDialog
   ) {}
+
   public ContactForm: FormGroup;
   ngOnInit() {
     this.ContactForm = this.formBuilder.group({
-      // clientId: ["", Validators.required],
+      clientId: ["", Validators.required],
       fullName: ["", Validators.required],
       emailAddress: ["", Validators.required],
       company: ["", Validators.required],
@@ -39,6 +43,7 @@ export class ContactForm2Component implements OnInit {
       message: ["", Validators.required]
     });
   }
+
   onSubmit() {
     console.log("this.ContactForm.value:" + this.ContactForm.value);
     console.log("this.ContactForm:" + this.ContactForm);
@@ -57,7 +62,7 @@ export class ContactForm2Component implements OnInit {
           this.dialog.open(DialogComponent, {});
         }
       });
-    // this.ContactForm.reset();
+    this.ContactForm.reset();
   }
   onReset() {}
 }

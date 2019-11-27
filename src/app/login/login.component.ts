@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private _router: Router
   ) {}
-  user: any;
   loginFormData = this.fb.group({
     email: [""],
     password: [""]
