@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { ContactForm } from "src/app/contact-form";
 import { CommonService } from "src/app/services/common.service";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
@@ -28,7 +28,7 @@ export class ContactForm2Component implements OnInit {
     private commonService: CommonService,
     private dialog: MatDialog
   ) {}
-  public ContactForm: ContactForm;
+  public ContactForm: FormGroup;
   ngOnInit() {
     this.ContactForm = this.formBuilder.group({
       // clientId: ["asdxzccxz", Validators.required],
