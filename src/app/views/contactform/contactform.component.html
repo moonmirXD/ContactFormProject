@@ -125,8 +125,8 @@
                     <div
                       class="alert alert-danger"
                       *ngIf="
-                        ContactForm.get('fullName').touched &&
-                        !ContactForm.get('fullName').valid
+                        ContactForm.controls('fullName').touched &&
+                        !ContactForm.controls('fullName').valid
                       "
                     >
                       Full name is required.
