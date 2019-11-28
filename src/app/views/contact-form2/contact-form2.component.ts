@@ -62,9 +62,19 @@ export class ContactForm2Component implements OnInit {
           dialogConfig.width = "30%";
           dialogConfig.height = "30%";
           this.dialog.open(DialogComponent, {});
+
+          //After submit
+          this.ContactForm.reset();
+
+          //Reload After submit
+          setTimeout(function() {
+            window.location.reload();
+          }, 1500);
         }
       });
     this.ContactForm.reset();
   }
-  onReset() {}
+  onReset() {
+    this.ContactForm.reset();
+  }
 }

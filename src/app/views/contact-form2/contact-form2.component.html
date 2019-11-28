@@ -84,7 +84,7 @@
                       placeholder="Placeholder"
                       name="fullName"
                       formControlName="fullName"
-                      [ngClass]="{'has-error': ContactForm.get('fullName').errors && (ContactForm.get('fullName').touched || ContactForm.get('fullName').dirty)}"
+                      [ngClass]="{'has-error': !ContactForm.get('fullName').valid && ContactForm.get('fullName').touched}"
                     />
                     <mat-icon matSuffix>assignment_ind</mat-icon>
                     <mat-hint>Hint</mat-hint>
@@ -255,7 +255,7 @@
                       color="primary"
                       class="btn_submit"
                       type="button"
-                      (click)="ContactForm.reset()"
+                      (click)="onReset()"
                     >
                       <mat-icon matSuffix>clear_all</mat-icon>Clear Form
                     </button>
