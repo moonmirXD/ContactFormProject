@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { throwError } from "rxjs";
+import { throwError, Observable } from "rxjs";
 import { retry, catchError } from "rxjs/operators";
+import { IContactForm } from "../core/models/contact_form";
 
 @Injectable({
   providedIn: "root"
@@ -17,8 +18,8 @@ export class CommonService {
       .post(this.urlPost, form)
       .pipe(retry(1), catchError(this.handleError));
   }
-  getForm() {
-    return this.http.get(this.urlGet);
+  getForm(): Observable<IContactForm[]> {
+    return this.http.get<IContactForm[]>(this.urlGet);
   }
   getFormById(id) {
     return this.http.get(this.urlGet + id);

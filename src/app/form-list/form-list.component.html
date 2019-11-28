@@ -1,5 +1,6 @@
 <main>
   <div class="container">
+    <p *ngIf="!dataSource">{{ err_message }}</p>
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource">
         <!-- ID Column -->

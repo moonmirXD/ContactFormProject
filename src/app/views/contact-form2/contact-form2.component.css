@@ -1,4 +1,5 @@
 /* HoneyPot antibot */
+
 .winnie {
   opacity: 0;
   position: absolute;
@@ -11,7 +12,6 @@
 /* HoneyPot */
 
 body {
-  padding-top: 20px;
   background-color: #faf8f0;
   overflow-x: hidden;
 }
@@ -41,6 +41,7 @@ h4 {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 .example-card {
   max-width: 800px !important;
