@@ -34,11 +34,13 @@ export class ContactForm2Component implements OnInit {
   public ContactForm: FormGroup;
   ngOnInit() {
     this.ContactForm = this.formBuilder.group({
-      // clientId: ["", Validators.required],
       fullName: ["", Validators.required],
-      emailAddress: ["", Validators.required],
+      emailAddress: ["", [Validators.required, Validators.email]],
       company: ["", Validators.required],
-      contactNo: ["", Validators.required],
+      contactNo: [
+        "",
+        [Validators.required, Validators.pattern("^[0-9]{1,15}$")]
+      ],
       subject: [Validators.required],
       message: ["", Validators.required]
     });
