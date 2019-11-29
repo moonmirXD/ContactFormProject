@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { CommonService } from "../services/common.service";
+import { CommonService } from "../../core/services/common.service";
 import { MatTableDataSource, MatPaginator } from "@angular/material";
 
 @Component({

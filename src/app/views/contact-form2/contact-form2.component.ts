@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
-import { CommonService } from "src/app/services/common.service";
+import { CommonService } from "src/app/core/services/common.service";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { DialogComponent } from "../dialog/dialog.component";
 

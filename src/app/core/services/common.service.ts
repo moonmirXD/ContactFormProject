@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
 import { retry, catchError } from "rxjs/operators";
-import { IContactForm } from "../core/models/contact_form";
+import { IContactForm } from "../models/contact_form";
 
 @Injectable({
   providedIn: "root"
