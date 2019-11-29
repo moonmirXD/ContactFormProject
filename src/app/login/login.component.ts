@@ -22,11 +22,12 @@ export class LoginComponent implements OnInit {
 
   loginUser(frmObject) {
     // this.authService
-  //     .login(this.loginFormData.getRawValue())
-  //     .subscribe((res: any) => {
-  //       console.log(res);
-  //       localStorage.setItem("token", res.token);
-  //       this._router.navigate(["/"]);
-  //     });
-  // }
+    //     .login(this.loginFormData.getRawValue())
+    //     .subscribe((res: any) => {
+    //       console.log(res);
+    //       localStorage.setItem("token", res.token);
+    //       this._router.navigate(["/"]);
+    //     });
+    // }
+  }
 }
